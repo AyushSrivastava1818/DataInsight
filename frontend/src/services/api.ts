@@ -2,7 +2,9 @@ import { supabase } from "../components/Shared/AuthContext";
 
 // Use a relative API path in development and rely on Vite proxy for /api.
 // This avoids cross-origin issues when the app is accessed via localhost or a LAN address.
-const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : "/api";
 export interface DatasetVersion {
   id: number;
   dataset_id: number;
