@@ -278,6 +278,11 @@ https://datainsight-production.up.railway.app/docs
 - Advanced visualizations
 - Scheduled reports
 - Dark mode enhancements
+- User authentication with private workspaces
+- User-specific dataset history
+- One-click "Clear Analysis History"
+- Cloud storage for uploaded datasets
+- Export reports in multiple formats
 
 ---
 
