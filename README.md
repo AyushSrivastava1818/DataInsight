@@ -1,131 +1,339 @@
-# DataInsight AI
+# 🚀 DataInsight AI
 
-DataInsight AI is a production-grade, full-stack, AI-powered data analytics and profiles workstation. Modeled after analytical suites like Tableau, Power BI, and Pandas, it lets users upload any CSV file (up to 100 MB), run interactive data cleaning operations, execute descriptive EDA statistical calculations, draw responsive dashboards, generate AI insights, chat with datasets, and compile publication-ready PDF reports.
+> AI-powered data cleaning, exploratory data analysis, intelligent insights, and report generation platform built with **React, TypeScript, FastAPI, and Python**.
 
-## Features
-
-1. **Modern Premium UI**: Built with a dark/light responsive glassmorphic palette.
-2. **Drag & Drop Upload**: Handles CSV files up to 100 MB. Compiles columns, counts, and initial Data Quality Scores out of 100.
-3. **Data Cleaning Workstation**:
-   - Impute missing entries via mean, median, mode, forward-fill, or backward-fill.
-   - Restrict outlier lines via IQR / Z-score thresholds (capping or removing records).
-   - Sanitize text cells (white spaces trimming, upper/lower/title casing, stripping special characters).
-   - Delete/rename columns and construct custom calculated variables using math equations.
-4. **Exploratory Data Analysis (EDA)**: Descriptive metrics for all features, category frequency grids, bivariate scatter plots, normal histograms, chronologically grouped line trends, and interactive Pearson correlation heatmaps.
-5. **AI Insights Deck**: Automatically summarizes dataset behaviors (revenue spikes, correlations, outlier warnings). Utilizes Gemini or OpenAI API keys if defined; otherwise, falls back to a rules-based local analyzer.
-6. **AI Chat Analyst**: Submit questions in plain English ("what trends do you observe?", "which columns should I delete?") and receive instant statistical breakdowns.
-7. **Publication PDF Compiler**: Generates downloadable PDF reports with metadata cards, cleaning logs audit trails, statistics grids, and embedded matplotlib plots.
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
+![Railway](https://img.shields.io/badge/Backend-Railway-0B0D0E)
 
 ---
 
-## Technical Stack
+## 🌐 Live Demo
 
-- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS, Recharts, Lucide Icons, Canvas Confetti.
-- **Backend**: Python 3.10+, FastAPI, Uvicorn, SQLite, SQLAlchemy.
-- **Data Engineering**: Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib, ReportLab.
-- **AI Models**: Gemini API Client, OpenAI API Client, rules-based regex fallback parser.
+**Application:**  
+👉 https://data-insight-jade.vercel.app
+
+**Backend API:**  
+👉 https://datainsight-production.up.railway.app
+
+**API Documentation:**  
+👉 https://datainsight-production.up.railway.app/docs
 
 ---
 
-## Directory Architecture
+# 📖 Overview
+
+DataInsight AI is a full-stack intelligent data analytics platform designed to simplify the process of exploring, cleaning, and understanding CSV datasets.
+
+Users can upload datasets, perform automated data cleaning operations, generate exploratory data analysis (EDA), receive AI-powered insights, interact with their datasets through an AI assistant, and export professional reports.
+
+The application is built with a modern React frontend and a FastAPI backend, providing a fast and scalable analytics experience.
+
+---
+
+# ✨ Features
+
+## 📂 Dataset Management
+
+- Upload CSV datasets
+- Dataset versioning
+- Multiple dataset support
+- Dataset preview
+- Metadata management
+
+---
+
+## 🧹 Data Cleaning
+
+- Missing value imputation
+- Duplicate removal
+- Data type correction
+- Text cleaning
+- Outlier detection
+- Column operations
+  - Rename
+  - Delete
+  - Create computed columns
+
+---
+
+## 📊 Exploratory Data Analysis
+
+- Dataset overview
+- Shape & memory usage
+- Missing value analysis
+- Data type summary
+- Descriptive statistics
+- Correlation matrix
+- Categorical analysis
+- Time-series detection
+- Data quality score
+
+---
+
+## 🤖 AI Insights
+
+Generate intelligent insights including:
+
+- Trends
+- Correlations
+- Anomalies
+- Recommendations
+
+---
+
+## 💬 AI Chat Assistant
+
+Interact with your dataset using natural language.
+
+Example questions:
+
+- Which columns contain missing values?
+- What are the strongest correlations?
+- Explain the quality score.
+- Summarize the dataset.
+
+---
+
+## 📑 Report Generation
+
+Export reports in:
+
+- CSV
+- PDF
+
+---
+
+# 🏗️ Tech Stack
+
+## Frontend
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React
+- Recharts
+
+## Backend
+
+- FastAPI
+- Python
+- SQLAlchemy
+- Pandas
+- SQLite
+- Uvicorn
+
+## Deployment
+
+- Vercel (Frontend)
+- Railway (Backend)
+
+---
+
+# 📁 Project Structure
 
 ```
-datainsight-ai/
-├── backend/
-│   ├── app/
-│   │   ├── config.py         # Storage, db, and API key constants
-│   │   ├── database.py       # SQLite connection details
-│   │   ├── models.py         # SQLAlchemy persistence models
-│   │   ├── schemas.py        # Request & response serialization checks
-│   │   ├── crud.py           # Database transaction queries
-│   │   ├── routers/          # API endpoints (upload, clean, eda, insights, chat, reports)
-│   │   └── services/         # Core business code (cleaning, eda, insights, chat, reportlab pdf)
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── test_backend.py       # Automated pandas operations test suite
+DataInsight/
+│
 ├── frontend/
 │   ├── src/
-│   │   ├── components/       # Shared navbar, layout, and glass buttons
-│   │   ├── pages/            # Landing page, dashboard, cleaning panel, eda views, chat, reports
-│   │   ├── services/         # api.ts endpoint configurations
-│   │   ├── App.tsx
-│   │   └── index.css         # Glassmorphism and dark mode class properties
-│   ├── tailwind.config.js
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── app/
+│   │   ├── routers/
+│   │   ├── services/
+│   │   ├── models.py
+│   │   └── main.py
+│   │
+│   ├── requirements.txt
 │   └── Dockerfile
-├── docker-compose.yml
-├── README.md
-└── sample_data/
-    └── company_sales_demo.csv # Inconsistent CSV dataset for local testing
+│
+└── README.md
 ```
 
 ---
 
-## Installation & Getting Started
+# ⚡ Getting Started
 
-### Method 1: Local Launch
+## Clone Repository
 
-#### 1. Start the Backend
-1. Navigate to the `backend` folder:
-   ```bash
-   cd backend
-   ```
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   # Windows:
-   .venv\Scripts\activate
-   # Mac/Linux:
-   source .venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Define environment variables in a `.env` file (Optional):
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key
-   OPENAI_API_KEY=your_openai_api_key
-   ```
-5. Run the server:
-   ```bash
-   python app/main.py
-   ```
-   The backend API will run at `http://localhost:8000`.
+```bash
+git clone https://github.com/AyushSrivastava1818/DataInsight.git
 
-#### 2. Start the Frontend
-1. Navigate to the `frontend` folder:
-   ```bash
-   cd frontend
-   ```
-2. Install packages:
-   ```bash
-   npm install --legacy-peer-deps
-   ```
-3. Launch development server:
-   ```bash
-   npm run dev
-   ```
-   The interactive dashboard will launch at `http://localhost:5173`.
+cd DataInsight
+```
 
 ---
 
-### Method 2: Docker Containerization
+# Backend Setup
 
-1. Ensure Docker Desktop is running.
-2. In the root directory `datainsight-ai`, run:
-   ```bash
-   docker-compose up --build
-   ```
-3. Once compiled, access the app at `http://localhost`.
-
----
-
-## Verification & Testing
-
-Verify Pandas operations and data profiling correctness by running the automated backend test suite:
 ```bash
 cd backend
-# With virtualenv active:
-python test_backend.py
+
+python -m venv .venv
+
+source .venv/bin/activate
 ```
-This suite automatically tests missing value imputation, duplicate removal, outlier capping, casing sanitizations, calculated columns, and health index rankings.
+
+Windows
+
+```powershell
+.venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run backend
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Backend runs at
+
+```
+http://localhost:8000
+```
+
+---
+
+# Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend runs at
+
+```
+http://localhost:5173
+```
+
+---
+
+# Environment Variables
+
+## Frontend
+
+Create `.env`
+
+```env
+VITE_API_URL=http://localhost:8000/api
+```
+
+Production
+
+```env
+VITE_API_URL=https://datainsight-production.up.railway.app
+```
+
+---
+
+## Backend
+
+Example `.env`
+
+```env
+SECRET_KEY=your_secret_key
+
+DATABASE_URL=sqlite:///./datainsight.db
+
+SUPABASE_URL=your_supabase_url
+
+SUPABASE_KEY=your_supabase_key
+```
+
+---
+
+# API Documentation
+
+Interactive Swagger documentation is available at:
+
+https://datainsight-production.up.railway.app/docs
+
+---
+
+# Future Improvements
+
+- User workspaces
+- Dashboard analytics
+- Team collaboration
+- More AI models
+- Cloud storage integration
+- Advanced visualizations
+- Scheduled reports
+- Dark mode enhancements
+
+---
+
+# Deployment
+
+Frontend
+
+- Vercel
+
+Backend
+
+- Railway
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add amazing feature"
+```
+
+4. Push
+
+```bash
+git push origin feature/amazing-feature
+```
+
+5. Open a Pull Request
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+# Author
+
+**Ayush Srivastava**
+
+GitHub
+
+https://github.com/AyushSrivastava1818
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
