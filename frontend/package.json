@@ -12,7 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
     "canvas-confetti": "^1.9.3",
-    "lucide-react": "^0.368.0",
+    "lucide-react": "^1.23.0",
     "motion": "^12.42.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
