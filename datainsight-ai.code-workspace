@@ -1,0 +1,47 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "DataInsight AI - Root"
+    },
+    {
+      "path": "backend",
+      "name": "Backend (FastAPI)"
+    },
+    {
+      "path": "frontend",
+      "name": "Frontend (React + Vite)"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder: Backend (FastAPI)}/.venv/Scripts/python.exe"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "dbaeumer.vscode-eslint"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Backend",
+        "type": "shell",
+        "command": "cd backend && .venv\\Scripts\\activate && python app/main.py",
+        "group": "build",
+        "presentation": { "panel": "new" }
+      },
+      {
+        "label": "Start Frontend",
+        "type": "shell",
+        "command": "cd frontend && npm run dev",
+        "group": "build",
+        "presentation": { "panel": "new" }
+      }
+    ]
+  }
+}

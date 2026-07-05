@@ -1,0 +1,9 @@
+product_id,product_name,category,price,quantity_sold,rating
+1,Laptop,Electronics,1200.99,45,4.5
+2,Monitor,Electronics,350.0,120,4.2
+3,Keyboard,Electronics,79.99,300,4.8
+4,Mouse,Electronics,29.99,500,4.6
+5,Desk Chair,Furniture,199.99,80,4.4
+6,Standing Desk,Furniture,599.99,35,4.7
+7,Notebook,Stationery,5.99,1000,4.3
+8,Pen Set,Stationery,12.5,800,4.1

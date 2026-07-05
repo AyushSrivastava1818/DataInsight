@@ -1,0 +1,28 @@
+Transaction_ID,Date,Customer_Name,Product_Category,Units_Sold,Unit_Price,Revenue,Customer_Rating
+1001,2026-01-05, Alice Smith ,Electronics,2,150.00,300.00,4.5
+1002,2026-01-06,Bob Jones,Clothing,1,,50.00,4.0
+1003,2026-01-07,  charlie brown,Home,5,20.00,100.00,3.5
+1004,2026-01-08,Diana Prince,Electronics,,1000.00,1000.00,4.8
+1005,2026-01-09,Evan Wright,Clothing,3,15.00,45.00,2.0
+1006,2026-01-10,Fiona Gallagher,Home,10,12.00,120.00,
+1007,2026-01-11,George Clark,Books,4,8.50,34.00,4.2
+1008,01/12/2026,Hannah Abbott,Electronics,1,1200.00,1200.00,99.0
+1009,2026-01-13,Ian Malcolm,Clothing,2,30.00,60.00,3.8
+1010,2026-01-14,Julia Roberts,Home,15,25.00,375.00,4.6
+1001,2026-01-05, Alice Smith ,Electronics,2,150.00,300.00,4.5
+1011,2026-01-16,Kevin Spacey,Books,1,12.00,12.00,1.5
+1012,2026-01-17,Laura Croft,Electronics,5,800.00,4000.00,4.9
+1013,2026-01-18,Michael Scott,Clothing,12,18.00,216.00,5.0
+1014,,Nancy Drew,Home,8,35.00,280.00,4.0
+1015,2026-01-20,Oscar Wilde,Books,,10.00,0.00,3.0
+1016,2026-01-21,Penelope Cruz,Electronics,1,4500.00,4500.00,4.7
+1017,2026-01-22,Quentin Tarantino,Clothing,4,22.00,88.00,4.1
+1018,2026-01-23,Rachel Green,Home,3,45.00,135.00,
+1019,2026-01-24,Sam Winchester,Books,6,9.00,54.00,4.4
+1020,2026-01-25,Tony Stark,Electronics,10,25000.00,250000.00,5.0
+1021,2026-01-26,Victor Frankenstein,Clothing,1,15.00,15.00,2.5
+1022,2026-01-27,Wendy Darling,Home,2,60.00,120.00,4.8
+1023,2026-01-28,Xavier Charles,Books,5,11.00,55.00,4.2
+1024,2026-01-29,Ygritte Snow,Electronics,2,180.00,360.00,3.9
+1025,2026-01-30,Zachary Levi,Clothing,3,25.00,75.00,4.0
+1010,2026-01-14,Julia Roberts,Home,15,25.00,375.00,4.6

@@ -1,0 +1,8 @@
+{
+  "name": "datainsight-ai",
+  "private": true,
+  "scripts": {
+    "dev": "powershell -ExecutionPolicy Bypass -File ./start-dev.ps1",
+    "build": "npm --prefix frontend run build"
+  }
+}
